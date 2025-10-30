@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SISTER NIVEDITA UNIVERSITY - Placement Registration</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+
+  h2, h3 {
+    text-align: center;
+    color: #2a4d69;
+    margin: 5px 0;
+  }
+
+  h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  form {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  details {
+    background-color: #fff;
+    border: 2px solid #2a4d69;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+  }
+
+  summary {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2a4d69;
+    cursor: pointer;
+    outline: none;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  input[type=text], input[type=email], input[type=date], textarea, select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  textarea { resize: vertical; }
+
+  .radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 12px;
+  }
+
+  .radio-group label, .checkbox-group label { font-weight: normal; }
+
+  button {
+    background-color: #2a4d69;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+    transition: 0.3s;
+  }
+
+  button:hover { background-color: #1e3550; }
+
+  #status {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .success { color: green; }
+  .error { color: red; }
+
+  @media (max-width: 600px) {
+    body { padding: 10px; }
+    button { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<h2>SISTER NIVEDITA UNIVERSITY</h2>
+<h3>Placement Registration Form (Final Year Students)</h3>
+
+<form id="placement-form">
+
+  <!-- Personal Information -->
+  <details open>
+    <summary>1. Personal Information</summary>
+    <input name="Full Name" placeholder="Full Name" required />
+    <input name="Enrollment Number" placeholder="Enrollment No." required />
+    <input name="Course & Specialization" placeholder="Course & Specialization" required />
+    <input name="Department" placeholder="Department" required />
+    <input name="Year & Semester" placeholder="Year & Semester" required />
+    <input name="Date of Birth" type="date" required />
+    <label>Gender:</label>
+    <div class="radio-group">
+      <label><input type="radio" name="Gender" value="Male" required> Male</label>
+      <label><input type="radio" name="Gender" value="Female"> Female</label>
+      <label><input type="radio" name="Gender" value="Prefer Not to Say"> Other</label>
+    </div>
+    <input name="Mobile Number" placeholder="Mobile No." required />
+    <input name="Alternate Mobile Number" placeholder="Alternate Mobile No." />
+    <input name="Official University Email ID" type="email" placeholder="University Email ID" required />
+    <input name="Personal Email ID" type="email" placeholder="Personal Email ID" />
+    <textarea name="Permanent Address" placeholder="Permanent Address" rows="2"></textarea>
+    <textarea name="Current/Hostel Address" placeholder="Current/Hostel Address" rows="2"></textarea>
+  </details>
+
+  <!-- Academic Details -->
+  <details>
+    <summary>2. Academic Details</summary>
+    <input name="Class10_School" placeholder="Class 10 - School" />
+    <input name="Class10_Board" placeholder="Class 10 - Board" />
+    <input name="Class10_Year" placeholder="Class 10 - Year of Passing" />
+    <input name="Class10_Percentage" placeholder="Class 10 - % " />
+    <div class="radio-group">
+      Class 10 Backlogs:
+      <label><input type="radio" name="Class10_Backlogs" value="Yes"> Yes</label>
+      <label><input type="radio" name="Class10_Backlogs" value="No"> No</label>
+    </div>
+    <input name="Class12_School" placeholder="Class 12 - School" />
+    <input name="Class12_Board" placeholder="Class 12 - Board" />
+    <input name="Class12_Year" placeholder="Class 12 - Year of Passing" />
+    <input name="Class12_Percentage" placeholder="Class 12 - % " />
+    <div class="radio-group">
+      Class 12 Backlogs:
+      <label><input type="radio" name="Class12_Backlogs" value="Yes"> Yes</label>
+      <label><input type="radio" name="Class12_Backlogs" value="No"> No</label>
+    </div>
+    <input name="Graduation_Sem1" placeholder="Graduation - Sem 1" />
+    <input name="Graduation_Sem2" placeholder="Graduation - Sem 2" />
+    <input name="Graduation_Sem3" placeholder="Graduation - Sem 3" />
+    <input name="Graduation_Sem4" placeholder="Graduation - Sem 4" />
+    <input name="Graduation_Sem5" placeholder="Graduation - Sem 5" />
+    <input name="Graduation_Sem6" placeholder="Graduation - Sem 6" />
+    <input name="Graduation_Sem7" placeholder="Graduation - Sem 7" />
+    <input name="Graduation_Sem8" placeholder="Graduation - Sem 8" />
+    <div class="radio-group">
+      Current Backlogs?
+      <label><input type="radio" name="Current_Backlogs" value="Yes"> Yes</label>
+      <label><input type="radio" name="Current_Backlogs" value="No"> No</label>
+    </div>
+    <input name="Backlog_Subjects" placeholder="If yes, specify subjects" />
+  </details>
+
+  <!-- Placement Preferences -->
+  <details>
+    <summary>3. Placement Preferences</summary>
+    <label>Preferred Job Sector:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="Preferred_Job_Sector" value="IT"> IT</label>
+      <label><input type="checkbox" name="Preferred_Job_Sector" value="Core"> Core</label>
+      <label><input type="checkbox" name="Preferred_Job_Sector" value="Management"> Management</label>
+      <label><input type="checkbox" name="Preferred_Job_Sector" value="Finance"> Finance</label>
+      <label><input type="checkbox" name="Preferred_Job_Sector" value="Government"> Government</label>
+      <label><input type="checkbox" name="Preferred_Job_Sector" value="Higher Studies"> Higher Studies</label>
+      <label><input type="checkbox" name="Preferred_Job_Sector" value="Startup"> Startup</label>
+    </div>
+    <input name="Preferred_Job_Sector_Other" placeholder="Others (if any)" />
+
+    <label>Preferred Job Location:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="Preferred_Job_Location" value="Kolkata"> Kolkata</label>
+      <label><input type="checkbox" name="Preferred_Job_Location" value="Pan India"> Pan India</label>
+      <label><input type="checkbox" name="Preferred_Job_Location" value="Abroad"> Abroad</label>
+      <label><input type="checkbox" name="Preferred_Job_Location" value="Work from Home"> Work from Home</label>
+    </div>
+
+    <div class="radio-group">
+      Are you interested in placement?
+      <label><input type="radio" name="Interested_Placement" value="Yes"> Yes</label>
+      <label><input type="radio" name="Interested_Placement" value="No"> No</label>
+    </div>
+    <input name="Placement_No_Reason" placeholder="If No, state reason" />
+
+    <div class="radio-group">
+      Willing to relocate?
+      <label><input type="radio" name="Willing_Relocate" value="Yes"> Yes</label>
+      <label><input type="radio" name="Willing_Relocate" value="No"> No</label>
+    </div>
+    <input name="Expected_Salary" placeholder="Expected Salary (CTC)" />
+  </details>
+
+  <!-- Skills & Certifications -->
+  <details>
+    <summary>4. Skills & Certifications</summary>
+    <textarea name="Technical_Skills" placeholder="Technical Skills" rows="2"></textarea>
+    <textarea name="Programming_Languages_Tools" placeholder="Programming Languages / Tools" rows="2"></textarea>
+    <textarea name="Certifications" placeholder="Certifications (with issuing authority)" rows="2"></textarea>
+    <textarea name="Soft_Skills" placeholder="Soft Skills" rows="2"></textarea>
+    <textarea name="Projects_Undertaken" placeholder="Projects Undertaken" rows="2"></textarea>
+  </details>
+
+ <!-- Documents Upload -->
+  <details>
+    <summary>5. Documents Upload (Attach Copies)</summary>
+
+    <p>Please upload clear, legible copies of the following documents in PDF/JPEG format (max 5 MB each).</p>
+
+    <label for="resume">Updated Resume:</label>
+    <input type="file" id="resume" name="Resume" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+
+    <label for="class10">Class 10 Marksheet:</label>
+    <input type="file" id="class10" name="Class10_Marksheet" accept=".pdf,.jpg,.jpeg,.png" required>
+
+    <label for="class12">Class 12 Marksheet:</label>
+    <input type="file" id="class12" name="Class12_Marksheet" accept=".pdf,.jpg,.jpeg,.png" required>
+
+    <label for="gradesheets">Semester-wise Grade Sheets Compiled:</label>
+    <input type="file" id="gradesheets" name="Semester_Grade_Sheets" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+
+    <label for="certifications">Certifications Compiled (if any):</label>
+    <input type="file" id="certifications" name="Certifications" accept=".pdf,.jpg,.jpeg,.png" multiple>
+
+    <label for="photo">Passport-size Photograph:</label>
+    <input type="file" id="photo" name="Passport_Photo" accept=".jpg,.jpeg,.png" required>
+  </details>
+
+  <!-- Declaration -->
+  <details>
+    <summary>5. Declaration</summary>
+   <p>I hereby declare that all the information provided above is true and correct to the best of my knowledge. I agree to abide by the rules and regulations of the Training & Placement Cell and understand that any false information may lead to disqualification from campus placement activities.</p>
+    <input name="Signature" placeholder="Signature of Student" required />
+    <input name="Declaration_Date" type="date" required />
+  </fieldset>
+
+  <button type="submit">Submit</button>
+  <p id="status"></p>
+</form>
+
+<script>
+const form = document.getElementById("placement-form");
+const scriptURL = "https://script.google.com/macros/s/AKfycbw4I_x1rNpBaaYPEeqn1vSLyYHfLxI_sLuyMRcKwFedstalAFSKULowKG40bDznsJCk6w/exec"; // your Web App URL
+
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+
+  const statusEl = document.getElementById("status");
+  statusEl.textContent = "Submitting...";
+  statusEl.className = "";
+
+  const formData = new FormData(form);
+  const data = {};
+
+  // Convert text fields to object
+  for (let [key, value] of formData.entries()) {
+    data[key] = value;
+  }
+
+  // Convert files to base64
+  data.__files = [];
+  for (let [key, file] of formData.entries()) {
+    if (file instanceof File && file.size > 0) {
+      const base64 = await fileToBase64(file);
+      data.__files.push({
+        fieldName: key,
+        fileName: file.name,
+        mimeType: file.type,
+        contentBase64: base64.split(",")[1] // remove "data:xxx;base64,"
+      });
+    }
+  }
+
+  // Send JSON to Apps Script
+  fetch(scriptURL, {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(response => {
+    if (response.status === "success") {
+      statusEl.textContent = "Form submitted successfully!";
+      statusEl.className = "success";
+      form.reset();
+    } else {
+      statusEl.textContent = "Error: " + response.message;
+      statusEl.className = "error";
+    }
+  })
+  .catch(err => {
+    statusEl.textContent = "Submission failed: " + err;
+    statusEl.className = "error";
+  });
+});
+
+// Helper function to convert file to Base64
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+  });
+}
+</script>
